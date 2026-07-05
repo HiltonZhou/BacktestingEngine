@@ -37,10 +37,12 @@ void Backtest::run()
 }
 
 void Backtest::buy(const Candle& candles)
-{
+{   
     position = true;
     quantity = balance/candles.close;
     balance = 0;
+
+    buyPrice = candles.close;
 
     std::cout << "BUY: " << candles.date << " AT " << candles.close << std::endl;
 }
@@ -50,6 +52,9 @@ void Backtest::sell(const Candle& candles)
     position = false;
     balance = quantity * candles.close;
     quantity = 0;
+
+    //calculate win or loss
+    double profit = 1;
 
     std::cout << "SELL: " << candles.date << " AT " << candles.close << std::endl;
 }

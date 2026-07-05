@@ -21,8 +21,13 @@ class Backtest{
 
         double quantity = 0;
 
+        double buyPrice = 0.0;
 
+        double sellPrice = 0.0;
 
+        int wins = 0;
+
+        int losses = 0;
 
     public:
         Backtest(const Strategy& strategy, const std::vector<Candle>& candles);
