@@ -16,7 +16,7 @@ void Backtest::setBalance(double cashAmt)
 void Backtest::run()
 {
     std::cout << "Running Backtest..." << std::endl;
-    std::cout << "Starting Balance..." << std::endl;
+    std::cout << "Starting Balance..." << initialBalance << std::endl;
 
     for(size_t i = 0; i < candles.size(); i++){
         Signal signal = strategy.generateSignal(candles,i);
@@ -55,7 +55,8 @@ void Backtest::sell(const Candle& candles)
 }
 
 void Backtest::Stats()
-{
+{   
+    std::cout << "Stats:" << std::endl;
     std::cout << "\nInitial Balance: $" << initialBalance << std::endl;
     std::cout << "Final Balance: $" << finalBalance << std::endl;
     std::cout << "Profit: $" << finalBalance - initialBalance << std::endl;
