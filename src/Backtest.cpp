@@ -69,8 +69,7 @@ void Backtest::sell(const Candle& candles)
 void Backtest::Stats()
 {   
     totalTrades = wins+losses;
-
-
+    
     std::cout << "Stats:" << std::endl;
     std::cout << "\nInitial Balance: $" << initialBalance << std::endl;
     std::cout << "Final Balance: $" << finalBalance << std::endl;
