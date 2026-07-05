@@ -28,12 +28,11 @@ class Backtest{
         void run();
 
         void buy(const Candle& candle);
-        
+
         void sell(const Candle& candle);
 
         void setBalance(const double cash);
         
-
 };  
 
 #endif
