@@ -53,17 +53,28 @@ void Backtest::sell(const Candle& candles)
     balance = quantity * candles.close;
     quantity = 0;
 
+    sellPrice = candles.close;
     //calculate win or loss
-    double profit = 1;
+    double profit = (sellPrice - buyPrice) * 100;
+
+    if(profit > 0){
+        wins++;
+    }else if(profit < 0){
+        losses++;
+    }
 
     std::cout << "SELL: " << candles.date << " AT " << candles.close << std::endl;
 }
 
 void Backtest::Stats()
 {   
+    totalTrades = wins+losses;
+
+
     std::cout << "Stats:" << std::endl;
     std::cout << "\nInitial Balance: $" << initialBalance << std::endl;
     std::cout << "Final Balance: $" << finalBalance << std::endl;
     std::cout << "Profit: $" << finalBalance - initialBalance << std::endl;
     std::cout << "Return: "<< ((finalBalance - initialBalance)/ initialBalance)*100 << "%" << std::endl;
+    std::cout << "Winrate: " << 100.0 * wins/totalTrades << "%" << std::endl;
 }

@@ -21,6 +21,8 @@ class Backtest{
 
         double quantity = 0;
 
+        int totalTrades = 0;
+
         double buyPrice = 0.0;
 
         double sellPrice = 0.0;
