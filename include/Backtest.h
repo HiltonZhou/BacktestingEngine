@@ -35,8 +35,7 @@ class Backtest{
 
         void setBalance(const double cash);
 
-        void Stats();
-        
+        void Stats();    
 };  
 
 #endif
