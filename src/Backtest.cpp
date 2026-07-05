@@ -27,16 +27,17 @@ void Backtest::run()
         }
     }
 
-    //final run check if u still got btc
+    //final run check if you still got btc
     if(position){
         sell(candles.back());
     }
 
     finalBalance = balance;
 
-    std::cout << "\nInitial Balance: $" << initialBalance << '\n';
-    std::cout << "Final Balance: $" << finalBalance << '\n';
-    std::cout << "Profit: $" << finalBalance - initialBalance << '\n';
+    std::cout << "\nInitial Balance: $" << initialBalance << std::endl;
+    std::cout << "Final Balance: $" << finalBalance << std::endl;
+    std::cout << "Profit: $" << finalBalance - initialBalance << std::endl;
+    std::cout << "Return: "<< (finalBalance - initialBalance)/ initialBalance << std::endl;
 }
 
 void Backtest::buy(const Candle& candles)

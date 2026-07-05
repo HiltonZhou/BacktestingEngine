@@ -21,6 +21,8 @@ class Backtest{
 
         double quantity = 0;
 
+        
+
 
     public:
         Backtest(const Strategy& strategy, const std::vector<Candle>& candles);
