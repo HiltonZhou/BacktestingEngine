@@ -1,0 +1,3 @@
+/Users/hiltonzhou/QuantProjects/BacktestingEngine/build/CMakeFiles/BacktestingEngine.dir
+/Users/hiltonzhou/QuantProjects/BacktestingEngine/build/CMakeFiles/edit_cache.dir
+/Users/hiltonzhou/QuantProjects/BacktestingEngine/build/CMakeFiles/rebuild_cache.dir
