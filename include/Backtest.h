@@ -21,7 +21,7 @@ class Backtest{
 
         double quantity = 0;
 
-        
+
 
 
     public:
@@ -34,6 +34,8 @@ class Backtest{
         void sell(const Candle& candle);
 
         void setBalance(const double cash);
+
+        void Stats();
         
 };  
 

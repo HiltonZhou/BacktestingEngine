@@ -27,5 +27,7 @@ int main()
 
     bt.run();
 
+    bt.Stats();
+
     return 0;
 }

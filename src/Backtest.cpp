@@ -33,11 +33,6 @@ void Backtest::run()
     }
 
     finalBalance = balance;
-
-    std::cout << "\nInitial Balance: $" << initialBalance << std::endl;
-    std::cout << "Final Balance: $" << finalBalance << std::endl;
-    std::cout << "Profit: $" << finalBalance - initialBalance << std::endl;
-    std::cout << "Return: "<< (finalBalance - initialBalance)/ initialBalance << std::endl;
 }
 
 void Backtest::buy(const Candle& candles)
@@ -56,4 +51,12 @@ void Backtest::sell(const Candle& candles)
     quantity = 0;
 
     std::cout << "SELL: " << candles.date << " AT " << candles.close << std::endl;
+}
+
+void Backtest::Stats()
+{
+    std::cout << "\nInitial Balance: $" << initialBalance << std::endl;
+    std::cout << "Final Balance: $" << finalBalance << std::endl;
+    std::cout << "Profit: $" << finalBalance - initialBalance << std::endl;
+    std::cout << "Return: "<< (finalBalance - initialBalance)/ initialBalance << std::endl;
 }
