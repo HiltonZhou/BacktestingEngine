@@ -1,5 +1,6 @@
 #include "Backtest.h"
 #include <iostream>
+#include <cmath>
 
 Backtest::Backtest(const Strategy& strategy, const std::vector<Candle>& candles): strategy(strategy), candles(candles)
 {
@@ -58,5 +59,5 @@ void Backtest::Stats()
     std::cout << "\nInitial Balance: $" << initialBalance << std::endl;
     std::cout << "Final Balance: $" << finalBalance << std::endl;
     std::cout << "Profit: $" << finalBalance - initialBalance << std::endl;
-    std::cout << "Return: "<< (finalBalance - initialBalance)/ initialBalance << std::endl;
+    std::cout << "Return: "<< ((finalBalance - initialBalance)/ initialBalance)*100 << "%" << std::endl;
 }

@@ -17,7 +17,7 @@ int main()
 
     // -------------------------------------------------
 
-    MovingAverageStrategy strategy(100);
+    MovingAverageStrategy strategy(200);
 
     Backtest bt(strategy, candles);
 
