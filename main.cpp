@@ -1,6 +1,6 @@
 #include <iostream>
 #include "Data.h"
-#include "MovingAverageStrategy.h"
+#include "SimpleMovingAverage.h"
 #include "Backtest.h"
 
 int main()
@@ -17,7 +17,7 @@ int main()
 
     // -------------------------------------------------
 
-    MovingAverageStrategy strategy(200);
+    SMA strategy(200);
 
     Backtest bt(strategy, candles);
 

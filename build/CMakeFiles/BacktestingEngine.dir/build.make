@@ -100,19 +100,19 @@ CMakeFiles/BacktestingEngine.dir/src/Data.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BacktestingEngine.dir/src/Data.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hiltonzhou/QuantProjects/BacktestingEngine/src/Data.cpp -o CMakeFiles/BacktestingEngine.dir/src/Data.cpp.s
 
-CMakeFiles/BacktestingEngine.dir/src/MovingAverageStrategy.cpp.o: CMakeFiles/BacktestingEngine.dir/flags.make
-CMakeFiles/BacktestingEngine.dir/src/MovingAverageStrategy.cpp.o: /Users/hiltonzhou/QuantProjects/BacktestingEngine/src/MovingAverageStrategy.cpp
-CMakeFiles/BacktestingEngine.dir/src/MovingAverageStrategy.cpp.o: CMakeFiles/BacktestingEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/hiltonzhou/QuantProjects/BacktestingEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/BacktestingEngine.dir/src/MovingAverageStrategy.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BacktestingEngine.dir/src/MovingAverageStrategy.cpp.o -MF CMakeFiles/BacktestingEngine.dir/src/MovingAverageStrategy.cpp.o.d -o CMakeFiles/BacktestingEngine.dir/src/MovingAverageStrategy.cpp.o -c /Users/hiltonzhou/QuantProjects/BacktestingEngine/src/MovingAverageStrategy.cpp
+CMakeFiles/BacktestingEngine.dir/src/SimpleMovingAverage.cpp.o: CMakeFiles/BacktestingEngine.dir/flags.make
+CMakeFiles/BacktestingEngine.dir/src/SimpleMovingAverage.cpp.o: /Users/hiltonzhou/QuantProjects/BacktestingEngine/src/SimpleMovingAverage.cpp
+CMakeFiles/BacktestingEngine.dir/src/SimpleMovingAverage.cpp.o: CMakeFiles/BacktestingEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/hiltonzhou/QuantProjects/BacktestingEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/BacktestingEngine.dir/src/SimpleMovingAverage.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BacktestingEngine.dir/src/SimpleMovingAverage.cpp.o -MF CMakeFiles/BacktestingEngine.dir/src/SimpleMovingAverage.cpp.o.d -o CMakeFiles/BacktestingEngine.dir/src/SimpleMovingAverage.cpp.o -c /Users/hiltonzhou/QuantProjects/BacktestingEngine/src/SimpleMovingAverage.cpp
 
-CMakeFiles/BacktestingEngine.dir/src/MovingAverageStrategy.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BacktestingEngine.dir/src/MovingAverageStrategy.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hiltonzhou/QuantProjects/BacktestingEngine/src/MovingAverageStrategy.cpp > CMakeFiles/BacktestingEngine.dir/src/MovingAverageStrategy.cpp.i
+CMakeFiles/BacktestingEngine.dir/src/SimpleMovingAverage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BacktestingEngine.dir/src/SimpleMovingAverage.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hiltonzhou/QuantProjects/BacktestingEngine/src/SimpleMovingAverage.cpp > CMakeFiles/BacktestingEngine.dir/src/SimpleMovingAverage.cpp.i
 
-CMakeFiles/BacktestingEngine.dir/src/MovingAverageStrategy.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BacktestingEngine.dir/src/MovingAverageStrategy.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hiltonzhou/QuantProjects/BacktestingEngine/src/MovingAverageStrategy.cpp -o CMakeFiles/BacktestingEngine.dir/src/MovingAverageStrategy.cpp.s
+CMakeFiles/BacktestingEngine.dir/src/SimpleMovingAverage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BacktestingEngine.dir/src/SimpleMovingAverage.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hiltonzhou/QuantProjects/BacktestingEngine/src/SimpleMovingAverage.cpp -o CMakeFiles/BacktestingEngine.dir/src/SimpleMovingAverage.cpp.s
 
 CMakeFiles/BacktestingEngine.dir/src/Backtest.cpp.o: CMakeFiles/BacktestingEngine.dir/flags.make
 CMakeFiles/BacktestingEngine.dir/src/Backtest.cpp.o: /Users/hiltonzhou/QuantProjects/BacktestingEngine/src/Backtest.cpp
@@ -132,7 +132,7 @@ CMakeFiles/BacktestingEngine.dir/src/Backtest.cpp.s: cmake_force
 BacktestingEngine_OBJECTS = \
 "CMakeFiles/BacktestingEngine.dir/main.cpp.o" \
 "CMakeFiles/BacktestingEngine.dir/src/Data.cpp.o" \
-"CMakeFiles/BacktestingEngine.dir/src/MovingAverageStrategy.cpp.o" \
+"CMakeFiles/BacktestingEngine.dir/src/SimpleMovingAverage.cpp.o" \
 "CMakeFiles/BacktestingEngine.dir/src/Backtest.cpp.o"
 
 # External object files for target BacktestingEngine
@@ -140,7 +140,7 @@ BacktestingEngine_EXTERNAL_OBJECTS =
 
 BacktestingEngine: CMakeFiles/BacktestingEngine.dir/main.cpp.o
 BacktestingEngine: CMakeFiles/BacktestingEngine.dir/src/Data.cpp.o
-BacktestingEngine: CMakeFiles/BacktestingEngine.dir/src/MovingAverageStrategy.cpp.o
+BacktestingEngine: CMakeFiles/BacktestingEngine.dir/src/SimpleMovingAverage.cpp.o
 BacktestingEngine: CMakeFiles/BacktestingEngine.dir/src/Backtest.cpp.o
 BacktestingEngine: CMakeFiles/BacktestingEngine.dir/build.make
 BacktestingEngine: CMakeFiles/BacktestingEngine.dir/link.txt

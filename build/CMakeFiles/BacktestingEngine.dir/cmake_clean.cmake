@@ -7,8 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/BacktestingEngine.dir/src/Backtest.cpp.o.d"
   "CMakeFiles/BacktestingEngine.dir/src/Data.cpp.o"
   "CMakeFiles/BacktestingEngine.dir/src/Data.cpp.o.d"
-  "CMakeFiles/BacktestingEngine.dir/src/MovingAverageStrategy.cpp.o"
-  "CMakeFiles/BacktestingEngine.dir/src/MovingAverageStrategy.cpp.o.d"
+  "CMakeFiles/BacktestingEngine.dir/src/SimpleMovingAverage.cpp.o"
+  "CMakeFiles/BacktestingEngine.dir/src/SimpleMovingAverage.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

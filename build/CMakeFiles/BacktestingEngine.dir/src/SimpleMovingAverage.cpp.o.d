@@ -1,5 +1,7 @@
-CMakeFiles/BacktestingEngine.dir/main.cpp.o: \
-  /Users/hiltonzhou/QuantProjects/BacktestingEngine/main.cpp \
+CMakeFiles/BacktestingEngine.dir/src/SimpleMovingAverage.cpp.o: \
+  /Users/hiltonzhou/QuantProjects/BacktestingEngine/src/SimpleMovingAverage.cpp \
+  /Users/hiltonzhou/QuantProjects/BacktestingEngine/include/SimpleMovingAverage.h \
+  /Users/hiltonzhou/QuantProjects/BacktestingEngine/include/Strategy.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config_site \
@@ -791,9 +793,5 @@ CMakeFiles/BacktestingEngine.dir/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/stack.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/print \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/unistd.h \
-  /Users/hiltonzhou/QuantProjects/BacktestingEngine/include/Data.h \
-  /Users/hiltonzhou/QuantProjects/BacktestingEngine/include/Candle.h \
-  /Users/hiltonzhou/QuantProjects/BacktestingEngine/include/SimpleMovingAverage.h \
-  /Users/hiltonzhou/QuantProjects/BacktestingEngine/include/Strategy.h \
   /Users/hiltonzhou/QuantProjects/BacktestingEngine/include/Signal.h \
-  /Users/hiltonzhou/QuantProjects/BacktestingEngine/include/Backtest.h
+  /Users/hiltonzhou/QuantProjects/BacktestingEngine/include/Candle.h

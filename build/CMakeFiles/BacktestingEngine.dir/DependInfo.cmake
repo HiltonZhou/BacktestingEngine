@@ -11,7 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/hiltonzhou/QuantProjects/BacktestingEngine/main.cpp" "CMakeFiles/BacktestingEngine.dir/main.cpp.o" "gcc" "CMakeFiles/BacktestingEngine.dir/main.cpp.o.d"
   "/Users/hiltonzhou/QuantProjects/BacktestingEngine/src/Backtest.cpp" "CMakeFiles/BacktestingEngine.dir/src/Backtest.cpp.o" "gcc" "CMakeFiles/BacktestingEngine.dir/src/Backtest.cpp.o.d"
   "/Users/hiltonzhou/QuantProjects/BacktestingEngine/src/Data.cpp" "CMakeFiles/BacktestingEngine.dir/src/Data.cpp.o" "gcc" "CMakeFiles/BacktestingEngine.dir/src/Data.cpp.o.d"
-  "/Users/hiltonzhou/QuantProjects/BacktestingEngine/src/MovingAverageStrategy.cpp" "CMakeFiles/BacktestingEngine.dir/src/MovingAverageStrategy.cpp.o" "gcc" "CMakeFiles/BacktestingEngine.dir/src/MovingAverageStrategy.cpp.o.d"
+  "/Users/hiltonzhou/QuantProjects/BacktestingEngine/src/SimpleMovingAverage.cpp" "CMakeFiles/BacktestingEngine.dir/src/SimpleMovingAverage.cpp.o" "gcc" "CMakeFiles/BacktestingEngine.dir/src/SimpleMovingAverage.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

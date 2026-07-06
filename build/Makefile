@@ -201,29 +201,29 @@ src/Data.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BacktestingEngine.dir/build.make CMakeFiles/BacktestingEngine.dir/src/Data.cpp.s
 .PHONY : src/Data.cpp.s
 
-src/MovingAverageStrategy.o: src/MovingAverageStrategy.cpp.o
-.PHONY : src/MovingAverageStrategy.o
+src/SimpleMovingAverage.o: src/SimpleMovingAverage.cpp.o
+.PHONY : src/SimpleMovingAverage.o
 
 # target to build an object file
-src/MovingAverageStrategy.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BacktestingEngine.dir/build.make CMakeFiles/BacktestingEngine.dir/src/MovingAverageStrategy.cpp.o
-.PHONY : src/MovingAverageStrategy.cpp.o
+src/SimpleMovingAverage.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BacktestingEngine.dir/build.make CMakeFiles/BacktestingEngine.dir/src/SimpleMovingAverage.cpp.o
+.PHONY : src/SimpleMovingAverage.cpp.o
 
-src/MovingAverageStrategy.i: src/MovingAverageStrategy.cpp.i
-.PHONY : src/MovingAverageStrategy.i
+src/SimpleMovingAverage.i: src/SimpleMovingAverage.cpp.i
+.PHONY : src/SimpleMovingAverage.i
 
 # target to preprocess a source file
-src/MovingAverageStrategy.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BacktestingEngine.dir/build.make CMakeFiles/BacktestingEngine.dir/src/MovingAverageStrategy.cpp.i
-.PHONY : src/MovingAverageStrategy.cpp.i
+src/SimpleMovingAverage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BacktestingEngine.dir/build.make CMakeFiles/BacktestingEngine.dir/src/SimpleMovingAverage.cpp.i
+.PHONY : src/SimpleMovingAverage.cpp.i
 
-src/MovingAverageStrategy.s: src/MovingAverageStrategy.cpp.s
-.PHONY : src/MovingAverageStrategy.s
+src/SimpleMovingAverage.s: src/SimpleMovingAverage.cpp.s
+.PHONY : src/SimpleMovingAverage.s
 
 # target to generate assembly for a file
-src/MovingAverageStrategy.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BacktestingEngine.dir/build.make CMakeFiles/BacktestingEngine.dir/src/MovingAverageStrategy.cpp.s
-.PHONY : src/MovingAverageStrategy.cpp.s
+src/SimpleMovingAverage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BacktestingEngine.dir/build.make CMakeFiles/BacktestingEngine.dir/src/SimpleMovingAverage.cpp.s
+.PHONY : src/SimpleMovingAverage.cpp.s
 
 # Help Target
 help:
@@ -243,9 +243,9 @@ help:
 	@echo "... src/Data.o"
 	@echo "... src/Data.i"
 	@echo "... src/Data.s"
-	@echo "... src/MovingAverageStrategy.o"
-	@echo "... src/MovingAverageStrategy.i"
-	@echo "... src/MovingAverageStrategy.s"
+	@echo "... src/SimpleMovingAverage.o"
+	@echo "... src/SimpleMovingAverage.i"
+	@echo "... src/SimpleMovingAverage.s"
 .PHONY : help
 
 
