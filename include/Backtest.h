@@ -13,13 +13,13 @@ class Backtest{
 
         bool position = false;
 
-        double initialBalance = 0;
+        double initialBalance = 0.0;
 
-        double balance = 0;
+        double balance = 0.0;
 
-        double finalBalance = 0;
+        double finalBalance = 0.0;
 
-        double quantity = 0;
+        double quantity = 0.0;
 
         int totalTrades = 0;
 
@@ -30,6 +30,10 @@ class Backtest{
         int wins = 0;
 
         int losses = 0;
+
+        double commision = 0.0;
+
+        double commisionBalance = 0.0;
 
     public:
         Backtest(const Strategy& strategy, const std::vector<Candle>& candles);
@@ -42,7 +46,9 @@ class Backtest{
 
         void setBalance(const double cash);
 
-        void Stats();    
+        void Stats(); 
+
+        void setCommision(double commision);   
 };  
 
 #endif

@@ -44,6 +44,8 @@ void Backtest::buy(const Candle& candles)
 
     buyPrice = candles.close;
 
+    commisionBalance += (buyPrice * commision);
+
     std::cout << "BUY: " << candles.date << " AT " << candles.close << std::endl;
 }
 
@@ -54,6 +56,9 @@ void Backtest::sell(const Candle& candles)
     quantity = 0;
 
     sellPrice = candles.close;
+
+    commisionBalance += (sellPrice * commision);
+
     //calculate win or loss
     double profit = (sellPrice - buyPrice) * 100;
 
@@ -69,11 +74,20 @@ void Backtest::sell(const Candle& candles)
 void Backtest::Stats()
 {   
     totalTrades = wins+losses;
+
+    double profit = finalBalance - initialBalance - commisionBalance;
     
     std::cout << "Stats:" << std::endl;
     std::cout << "\nInitial Balance: $" << initialBalance << std::endl;
     std::cout << "Final Balance: $" << finalBalance << std::endl;
-    std::cout << "Profit: $" << finalBalance - initialBalance << std::endl;
-    std::cout << "Return: "<< ((finalBalance - initialBalance)/ initialBalance)*100 << "%" << std::endl;
+    std::cout << "Profit: $" << profit << std::endl;
+    std::cout << "Return: "<< (profit/ initialBalance)*100 << "%" << std::endl;
     std::cout << "Winrate: " << 100.0 * wins/totalTrades << "%" << std::endl;
+    std::cout << "total commision cost: $" << commisionBalance << std::endl;
 }
+
+void Backtest::setCommision(double commision)
+{
+    this->commision = commision;
+}
+
