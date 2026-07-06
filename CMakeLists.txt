@@ -11,6 +11,6 @@ add_executable(
     BacktestingEngine
     main.cpp
     src/Data.cpp
-    src/SimpleMovingAverage.cpp
+    src/SMA.cpp
     src/Backtest.cpp
 )

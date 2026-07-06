@@ -1,6 +1,6 @@
 #include <iostream>
 #include "Data.h"
-#include "SimpleMovingAverage.h"
+#include "SMA.h"
 #include "Backtest.h"
 
 int main()
@@ -21,7 +21,7 @@ int main()
 
     Backtest bt(strategy, candles);
 
-    const double balance = 1000;
+    const double balance = 1000.00;
 
     bt.setBalance(balance);
     
