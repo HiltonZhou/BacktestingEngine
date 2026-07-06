@@ -5,12 +5,12 @@
 class MovingAverageStrategy : public Strategy
 {
 private:
-    int amtCandle; //amount to look back on
+    int period; //period to look back on
 
     double calculateMovingAverage(const std::vector<Candle>& candles,int currentIndex) const;
 
 public:
-    MovingAverageStrategy(int amtCandle); 
+    MovingAverageStrategy(int period); 
 
     Signal generateSignal(const std::vector<Candle>& candles,int currentIndex) const override;
 };

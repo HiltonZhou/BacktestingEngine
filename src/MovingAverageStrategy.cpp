@@ -1,8 +1,8 @@
 #include "MovingAverageStrategy.h"
 
-MovingAverageStrategy::MovingAverageStrategy(int amtCandle)
+MovingAverageStrategy::MovingAverageStrategy(int period)
 {
-    this->amtCandle = amtCandle;
+    this->period = period;
 }
 
 Signal MovingAverageStrategy::generateSignal(const std::vector<Candle>& candles,int currentIndex) const
@@ -11,7 +11,7 @@ Signal MovingAverageStrategy::generateSignal(const std::vector<Candle>& candles,
 
     double currentClosePrice = candles[currentIndex].close;
 
-    if(currentIndex < amtCandle){
+    if(currentIndex < period){
         return Signal::HOLD;
     }
 
@@ -25,9 +25,9 @@ Signal MovingAverageStrategy::generateSignal(const std::vector<Candle>& candles,
 double MovingAverageStrategy::calculateMovingAverage(const std::vector<Candle>& candles,int currentIndex) const
 {
     double sum = 0;
-    for(int i = currentIndex - amtCandle; i < currentIndex; i++){
+    for(int i = currentIndex - period; i < currentIndex; i++){
         sum += candles[i].close;
     }
 
-    return sum/amtCandle;
+    return sum/period;
 }
