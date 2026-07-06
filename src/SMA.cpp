@@ -1,4 +1,4 @@
-#include "SMA.h"
+#include "Indicators/SMA.h"
 
 SMA::SMA(int period)
 {

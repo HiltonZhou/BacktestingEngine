@@ -1,6 +1,6 @@
 #include <iostream>
 #include "Data.h"
-#include "SMA.h"
+#include "Indicators/SMA.h"
 #include "Backtest.h"
 
 int main()
