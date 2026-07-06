@@ -40,7 +40,7 @@ void Backtest::buy(const Candle& candle)
 {   
     position = true;
     quantity = balance/candle.close;
-    buyPrice = candle.close;
+    buyPrice = candle.close * (1 + slippage);
 
     double fee = executeCommision(balance);
     quantity = (balance - fee) / buyPrice;
@@ -54,7 +54,7 @@ void Backtest::sell(const Candle& candle)
 {
     position = false;
 
-    sellPrice = candle.close;
+    sellPrice = candle.close * (1 - slippage);
 
     double grossValue = quantity * sellPrice;
     double fee = executeCommision(grossValue);

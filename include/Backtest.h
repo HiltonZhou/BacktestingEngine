@@ -35,6 +35,8 @@ class Backtest{
 
         double commisionBalance = 0.0;
 
+        double slippage = 0.005; //slippage amount per trade 0.05%
+
     public:
         Backtest(const Strategy& strategy, const std::vector<Candle>& candles);
 

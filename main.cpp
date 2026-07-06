@@ -21,7 +21,7 @@ int main()
 
     Backtest bt(strategy, candles);
 
-    const double balance = 10000;
+    const double balance = 1000;
 
     bt.setBalance(balance);
     
