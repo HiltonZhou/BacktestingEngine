@@ -24,6 +24,8 @@ int main()
     const double balance = 10000;
 
     bt.setBalance(balance);
+    
+    bt.setCommision(0.001);
 
     bt.run();
 
