@@ -48,7 +48,9 @@ class Backtest{
 
         void Stats(); 
 
-        void setCommision(double commision);   
+        void setCommision(double commision);  
+
+        double executeCommision(double tradeValue); 
 };  
 
 #endif
