@@ -7,6 +7,7 @@ cmake --build .
 
 compile: 
 
+cd build
 cmake --build .
 
 execute:
