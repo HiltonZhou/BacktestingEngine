@@ -2,7 +2,7 @@
 
 #include "Strategy.h"
 
-class MovingAverageStrategy : public Strategy
+class SMA : public Strategy
 {
 private:
     int period; //period to look back on
@@ -10,7 +10,7 @@ private:
     double calculateMovingAverage(const std::vector<Candle>& candles,int currentIndex) const;
 
 public:
-    MovingAverageStrategy(int period); 
+    SMA(int period); 
 
     Signal generateSignal(const std::vector<Candle>& candles,int currentIndex) const override;
 };

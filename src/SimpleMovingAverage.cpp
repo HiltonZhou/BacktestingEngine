@@ -1,11 +1,11 @@
-#include "MovingAverageStrategy.h"
+#include "SimpleMovingAverage.h"
 
-MovingAverageStrategy::MovingAverageStrategy(int period)
+SMA::SMA(int period)
 {
     this->period = period;
 }
 
-Signal MovingAverageStrategy::generateSignal(const std::vector<Candle>& candles,int currentIndex) const
+Signal SMA::generateSignal(const std::vector<Candle>& candles,int currentIndex) const
 {   
     double MA = calculateMovingAverage(candles, currentIndex);
 
@@ -22,7 +22,7 @@ Signal MovingAverageStrategy::generateSignal(const std::vector<Candle>& candles,
     return Signal::HOLD;
 }
 
-double MovingAverageStrategy::calculateMovingAverage(const std::vector<Candle>& candles,int currentIndex) const
+double SMA::calculateMovingAverage(const std::vector<Candle>& candles,int currentIndex) const
 {
     double sum = 0;
     for(int i = currentIndex - period; i < currentIndex; i++){
