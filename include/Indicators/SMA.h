@@ -1,3 +1,5 @@
+// Simple Moving Average
+
 #pragma once
 
 #include "Strategy.h"
