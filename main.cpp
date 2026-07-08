@@ -1,8 +1,25 @@
 #include <iostream>
+#include <vector>
+
 #include "Data.h"
 #include "Indicators/SMA.h"
 #include "Indicators/EMA.h"
 #include "Backtest.h"
+
+
+void runTest(Strategy &strat, const std::vector<Candle>& candles, const double balance, const double commision)
+{
+    Backtest bt(strat, candles);
+
+    bt.setBalance(balance);
+    
+    bt.setCommision(commision);
+
+    bt.run();
+
+    bt.Stats();
+}
+
 
 int main()
 {
@@ -17,24 +34,16 @@ int main()
     const auto& candles = BTC.getCandles();
 
     // -------------------------------------------------
-
-    SMA SMA_strategy(200);
-
-    Backtest bt(SMA_strategy, candles);
-
     const double balance = 1000.00;
 
-    bt.setBalance(balance);
-    
-    bt.setCommision(0.001);
+    const int period = 200;
 
-    bt.run();
-
-    bt.Stats();
+    const double commision = 0.001;
 
     // -------------------------------------------------
-    
-    
+    SMA SMA_strategy(period);
+
+    runTest(SMA_strategy,candles,balance,commision);
 
     return 0;
 }
