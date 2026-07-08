@@ -2,9 +2,11 @@
 #include <vector>
 
 #include "Data.h"
+#include "Backtest.h"
+
 #include "Indicators/SMA.h"
 #include "Indicators/EMA.h"
-#include "Backtest.h"
+#include "Indicators/RSI.h"
 
 
 void runTest(Strategy &strat, const std::vector<Candle>& candles, const double balance, const double commision)
@@ -49,5 +51,9 @@ int main()
 
     runTest(EMA_strategy,candles,balance,commision);
 
+    RSI RSI_strategy;
+
+    runTest(RSI_strategy, candles, balance, commision);
+    
     return 0;
 }

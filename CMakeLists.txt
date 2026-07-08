@@ -14,4 +14,5 @@ add_executable(
     src/Backtest.cpp
     src/SMA.cpp
     src/EMA.cpp
+    src/RSI.cpp
 )
