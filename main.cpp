@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Data.h"
 #include "Indicators/SMA.h"
+#include "Indicators/EMA.h"
 #include "Backtest.h"
 
 int main()
@@ -17,9 +18,9 @@ int main()
 
     // -------------------------------------------------
 
-    SMA strategy(200);
+    SMA SMA_strategy(200);
 
-    Backtest bt(strategy, candles);
+    Backtest bt(SMA_strategy, candles);
 
     const double balance = 1000.00;
 
@@ -30,6 +31,10 @@ int main()
     bt.run();
 
     bt.Stats();
+
+    // -------------------------------------------------
+    
+    
 
     return 0;
 }

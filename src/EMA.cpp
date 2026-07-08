@@ -1,0 +1,32 @@
+#include "Indicators/EMA.h"
+
+EMA::EMA(int period)
+{   
+    this->period = period;
+
+    alpha = 2.0 / (period + 1);
+}
+
+double EMA::calculateSMA(const std::vector<Candle>& candles,int currentIndex) const
+{
+    double sum = 0;
+
+    for(int i = currentIndex - period; i < currentIndex; i++){
+        sum += candles[i].close;
+    }
+
+    return sum/period;
+}
+
+double EMA::calculateEMA(const std::vector<Candle>& candles, int currentIndex) const
+{   
+    //base case
+    if(currentIndex == period)
+    {
+        return calculateSMA(candles, period);
+    }
+
+    //recursive
+    return alpha * candles[currentIndex].close + (1 - alpha) * calculateEMA(candles, currentIndex - 1);
+}
+
