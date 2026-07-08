@@ -10,8 +10,6 @@ class EMA : public Strategy
 
         double alpha; // smoothing factor
 
-        int track = 0;
-
         double calculateSMA(const std::vector<Candle>& candles,int currentIndex) const;
 
         double calculateEMA(const std::vector<Candle>& candles,int currentIndex) const;
@@ -19,4 +17,5 @@ class EMA : public Strategy
     public:
         EMA(int period);
 
+        Signal generateSignal(const std::vector<Candle>& candles,int currentIndex) const override;
 };
