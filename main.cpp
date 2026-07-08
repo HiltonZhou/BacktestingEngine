@@ -45,5 +45,9 @@ int main()
 
     runTest(SMA_strategy,candles,balance,commision);
 
+    EMA EMA_strategy(period);
+
+    runTest(EMA_strategy,candles,balance,commision);
+
     return 0;
 }

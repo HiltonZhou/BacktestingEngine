@@ -7,13 +7,13 @@ SMA::SMA(int period)
 
 Signal SMA::generateSignal(const std::vector<Candle>& candles,int currentIndex) const
 {   
-    double MA = calculateMovingAverage(candles, currentIndex);
-
-    double currentClosePrice = candles[currentIndex].close;
-
     if(currentIndex < period){
         return Signal::HOLD;
     }
+    
+    double MA = calculateMovingAverage(candles, currentIndex);
+
+    double currentClosePrice = candles[currentIndex].close;
 
     if(currentClosePrice > MA){return Signal::BUY;}
     

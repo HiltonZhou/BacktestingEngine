@@ -11,6 +11,7 @@ add_executable(
     BacktestingEngine
     main.cpp
     src/Data.cpp
-    src/SMA.cpp
     src/Backtest.cpp
+    src/SMA.cpp
+    src/EMA.cpp
 )

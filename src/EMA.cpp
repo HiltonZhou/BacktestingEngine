@@ -31,14 +31,14 @@ double EMA::calculateEMA(const std::vector<Candle>& candles, int currentIndex) c
 }
 
 Signal EMA::generateSignal(const std::vector<Candle>& candles,int currentIndex) const
-{   
-    double MA = calculateEMA(candles, currentIndex);
-
-    double currentClosePrice = candles[currentIndex].close;
-
+{       
     if(currentIndex < period){
         return Signal::HOLD;
     }
+
+    double MA = calculateEMA(candles, currentIndex);
+
+    double currentClosePrice = candles[currentIndex].close;
 
     if(currentClosePrice > MA){return Signal::BUY;}
     
