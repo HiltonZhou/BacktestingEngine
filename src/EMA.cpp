@@ -47,3 +47,4 @@ Signal EMA::generateSignal(const std::vector<Candle>& candles,int currentIndex) 
     return Signal::HOLD;
 }
 
+

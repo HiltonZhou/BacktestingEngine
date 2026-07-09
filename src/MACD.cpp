@@ -13,11 +13,16 @@ double MACD::calcMACD(const std::vector<Candle>& candles,int currentIndex) const
     double ema_12 = short_term.calculateEMA(candles, currentIndex);
     double ema_26 = long_term.calculateEMA(candles, currentIndex);
 
+
     return ema_12 - ema_26;
 }
 
-Signal MACD::generateSignal(const std::vector<Candle>& candles,int currentIndex) const
-{
+Signal MACD::generateSignal(const std::vector<Candle>& candles,int currentIndex)const
+{   
+    if(currentIndex < 26){
+        return Signal::HOLD;
+    }
+
     double macd_line = calcMACD(candles,currentIndex);
 
     EMA SL(9); // usually a 9 period as signal line
