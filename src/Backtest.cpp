@@ -26,6 +26,19 @@ void Backtest::run()
         }else if(signal == Signal::SELL && position){
             sell(candles[i]);
         }
+
+        //Maximum drawdown
+        currentPortfolioValue = balance + quantity * candles[i].close;
+
+        if(currentPortfolioValue > highestPortfolioValue){
+            highestPortfolioValue = currentPortfolioValue;
+        }
+
+        double drawdown = (highestPortfolioValue - currentPortfolioValue) / highestPortfolioValue;
+
+        if(drawdown > maximumDrawdown){
+            maximumDrawdown = drawdown;
+        }
     }
 
     //final run check if you still got btc
@@ -78,7 +91,7 @@ void Backtest::Stats()
 {   
     totalTrades = wins+losses;
 
-    double profit = finalBalance - initialBalance;
+    profit = finalBalance - initialBalance;
     
     std::cout << "Stats:" << std::endl;
     std::cout << "\nInitial Balance: $" << initialBalance << std::endl;
@@ -87,6 +100,7 @@ void Backtest::Stats()
     std::cout << "Return: "<< (profit/ initialBalance)*100 << "%" << std::endl;
     std::cout << "Winrate: " << 100.0 * wins/totalTrades << "%" << std::endl;
     std::cout << "total commision cost: $" << commisionBalance << std::endl;
+    std::cout << "Maximum Drawdown: " << maximumDrawdown * 100.0 << "%"<< std::endl;
 }
 
 void Backtest::setCommision(double commision)
@@ -100,4 +114,5 @@ double Backtest::executeCommision(double tradeValue)
     commisionBalance += fee;
     return fee;
 }
+
 

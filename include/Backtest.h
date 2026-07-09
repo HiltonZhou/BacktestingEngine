@@ -37,6 +37,14 @@ class Backtest{
 
         double slippage = 0.005; //slippage amount per trade 0.05%
 
+        double profit = 0.0;
+
+        double currentPortfolioValue = 0.0;
+
+        double highestPortfolioValue = 0.0;
+
+        double maximumDrawdown = 0.0;
+
     public:
         Backtest(const Strategy& strategy, const std::vector<Candle>& candles);
 
@@ -53,6 +61,7 @@ class Backtest{
         void setCommision(double commision);  
 
         double executeCommision(double tradeValue); 
+
 };  
 
 #endif
