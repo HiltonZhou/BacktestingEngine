@@ -4,7 +4,7 @@
 
 Backtest::Backtest(const Strategy& strategy, const std::vector<Candle>& candles): strategy(strategy), candles(candles)
 {
-    
+
 }
 
 void Backtest::setBalance(double cashAmt)
@@ -54,7 +54,7 @@ void Backtest::buy(const Candle& candle)
 
     balance = 0;
 
-    std::cout << "BUY: " << candle.date << " AT " << candle.close << std::endl;
+    //std::cout << "BUY: " << candle.date << " AT " << candle.close << std::endl;
 }
 
 void Backtest::sell(const Candle& candle)
@@ -78,7 +78,7 @@ void Backtest::sell(const Candle& candle)
         losses++;
     }
 
-    std::cout << "SELL: " << candle.date << " AT " << candle.close << std::endl;
+    //std::cout << "SELL: " << candle.date << " AT " << candle.close << std::endl;
 }
 
 void Backtest::Stats()
