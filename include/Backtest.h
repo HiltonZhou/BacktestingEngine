@@ -62,7 +62,7 @@ class Backtest{
 
         double executeCommision(double tradeValue); 
 
-        double MaximumDrawdown(double balance, double quantity, std::vector<Candle> candle, size_t index);
+        void MaximumDrawdown(double balance, double quantity, std::vector<Candle> candle, size_t index);
 };  
 
 #endif

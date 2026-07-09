@@ -105,7 +105,7 @@ double Backtest::executeCommision(double tradeValue)
     return fee;
 }
 
-double Backtest::MaximumDrawdown(double balance, double quantity, std::vector<Candle> candle, size_t index)
+void Backtest::MaximumDrawdown(double balance, double quantity, std::vector<Candle> candle, size_t index)
 {
     currentPortfolioValue = balance + quantity * candles[index].close;
 
