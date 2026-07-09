@@ -56,9 +56,5 @@ int main()
 
     runTest(RSI_strategy, candles, balance, commision);
 
-    MACD MACD_strategy;
-
-    runTest(MACD_strategy,candles, balance, commision);
-
     return 0;
 }
