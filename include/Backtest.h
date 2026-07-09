@@ -45,7 +45,7 @@ class Backtest{
 
         double maximumDrawdown = 0.0;
 
-        double riskFreeRate = 0.0455; // 4.45%
+        double riskFreeRate = 0.0455/365.0; // candle are in days (365 trading days) 4.55% is 10 year treasuary rate
 
         std::vector<double> portfolioValue;
 

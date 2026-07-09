@@ -4,7 +4,7 @@
 
 Backtest::Backtest(const Strategy& strategy, const std::vector<Candle>& candles): strategy(strategy), candles(candles)
 {
-
+    
 }
 
 void Backtest::setBalance(double cashAmt)
