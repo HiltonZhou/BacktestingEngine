@@ -95,6 +95,7 @@ void Backtest::Stats()
     std::cout << "Winrate: " << 100.0 * wins/totalTrades << "%" << std::endl;
     std::cout << "total commision cost: $" << commisionBalance << std::endl;
     std::cout << "Maximum Drawdown: " << maximumDrawdown * 100.0 << "%"<< std::endl;
+    std::cout << "Sharpe Ratio: " << SharpeRatio() << std::endl;
 }
 
 void Backtest::setCommision(double commision)
@@ -155,6 +156,11 @@ double Backtest::calcVolatility()
     variance = variance/(n-1);
 
     return std::sqrt(variance);
+}
+
+double Backtest::SharpeRatio()
+{
+    return (calcAvgReturns() - riskFreeRate)/calcVolatility();
 }
 
 

@@ -34,9 +34,6 @@ Signal RSI::generateSignal(const std::vector<Candle>& candles,int currentIndex) 
 
     double RSI_value = calculateRSI(candles, currentIndex);
 
-    std::cout << candles[currentIndex].date
-          << " RSI: " << RSI_value << '\n';
-
     if(RSI_value < 30){             //security could be oversold or undervalued potential rebound
         return Signal::BUY;
 

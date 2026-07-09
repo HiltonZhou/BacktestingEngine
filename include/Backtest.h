@@ -45,6 +45,8 @@ class Backtest{
 
         double maximumDrawdown = 0.0;
 
+        double riskFreeRate = 0.0455; // 4.45%
+
         std::vector<double> portfolioValue;
 
         std::vector<double> returns;
@@ -72,6 +74,8 @@ class Backtest{
         double calcAvgReturns();
 
         double calcVolatility();
+
+        double SharpeRatio();
 };  
 
 #endif
