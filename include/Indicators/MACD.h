@@ -4,11 +4,13 @@
 #include "Strategy.h"
 #include "EMA.h"
 
-class MACD: public EMA{
+class MACD: public Strategy{
 
     private:
+        double calcMACD(const std::vector<Candle>& candles,int currentIndex) const;
+        
     public:
         MACD();
 
-        double calcMACD(const std::vector<Candle>& candles,int currentIndex) const;
+        Signal generateSignal(const std::vector<Candle>& candles,int currentIndex) const override;
 };

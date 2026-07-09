@@ -7,6 +7,7 @@
 #include "Indicators/SMA.h"
 #include "Indicators/EMA.h"
 #include "Indicators/RSI.h"
+#include "Indicators/MACD.h"
 
 
 void runTest(Strategy &strat, const std::vector<Candle>& candles, const double balance, const double commision)
@@ -54,6 +55,10 @@ int main()
     RSI RSI_strategy;
 
     runTest(RSI_strategy, candles, balance, commision);
-    
+
+    MACD MACD_strategy;
+
+    runTest(MACD_strategy,candles, balance, commision);
+
     return 0;
 }

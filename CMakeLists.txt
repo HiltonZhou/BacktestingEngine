@@ -15,4 +15,5 @@ add_executable(
     src/SMA.cpp
     src/EMA.cpp
     src/RSI.cpp
+    src/MACD.cpp
 )
