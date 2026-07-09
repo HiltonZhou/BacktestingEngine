@@ -2,14 +2,13 @@
 
 #pragma once
 #include "Strategy.h"
+#include "EMA.h"
 
-class MACD: public Strategy{
+class MACD: public EMA{
 
     private:
-
     public:
         MACD();
 
-        double calcMACD();
-
+        double calcMACD(const std::vector<Candle>& candles,int currentIndex) const;
 };

@@ -18,4 +18,5 @@ class EMA : public Strategy
         EMA(int period);
 
         Signal generateSignal(const std::vector<Candle>& candles,int currentIndex) const override;
+
 };
