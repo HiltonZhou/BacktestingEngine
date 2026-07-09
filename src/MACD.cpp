@@ -27,7 +27,7 @@ Signal MACD::generateSignal(const std::vector<Candle>& candles,int currentIndex)
 
     EMA SL(9); // usually a 9 period as signal line
 
-    double signal_line = SL.calculateEMA(candles,currentIndex);
+    double signal_line = SL.calculateEMA(candles,currentIndex); // does not calculate as intended???
 
     if(macd_line > signal_line){
         return Signal::BUY;
