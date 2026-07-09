@@ -27,18 +27,8 @@ void Backtest::run()
             sell(candles[i]);
         }
 
-        //Maximum drawdown
-        currentPortfolioValue = balance + quantity * candles[i].close;
-
-        if(currentPortfolioValue > highestPortfolioValue){
-            highestPortfolioValue = currentPortfolioValue;
-        }
-
-        double drawdown = (highestPortfolioValue - currentPortfolioValue) / highestPortfolioValue;
-
-        if(drawdown > maximumDrawdown){
-            maximumDrawdown = drawdown;
-        }
+        MaximumDrawdown(balance,quantity,candles,i);
+        
     }
 
     //final run check if you still got btc
@@ -113,6 +103,21 @@ double Backtest::executeCommision(double tradeValue)
     double fee = tradeValue * commision;
     commisionBalance += fee;
     return fee;
+}
+
+double Backtest::MaximumDrawdown(double balance, double quantity, std::vector<Candle> candle, size_t index)
+{
+    currentPortfolioValue = balance + quantity * candles[index].close;
+
+    if(currentPortfolioValue > highestPortfolioValue){
+        highestPortfolioValue = currentPortfolioValue;
+    }
+
+    double drawdown = (highestPortfolioValue - currentPortfolioValue) / highestPortfolioValue;
+
+    if(drawdown > maximumDrawdown){
+        maximumDrawdown = drawdown;
+    }
 }
 
 
