@@ -45,6 +45,11 @@ class Backtest{
 
         double maximumDrawdown = 0.0;
 
+        std::vector<double> portfolioValue;
+
+        std::vector<double> returns;
+        
+
     public:
         Backtest(const Strategy& strategy, const std::vector<Candle>& candles);
 
@@ -62,7 +67,11 @@ class Backtest{
 
         double executeCommision(double tradeValue); 
 
-        void MaximumDrawdown(double balance, double quantity, std::vector<Candle> candle, size_t index);
+        void MaximumDrawdown(double cpv);
+
+        double calcAvgReturns();
+
+        double calcVolatility();
 };  
 
 #endif

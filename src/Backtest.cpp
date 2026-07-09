@@ -11,6 +11,7 @@ void Backtest::setBalance(double cashAmt)
 {
     this->balance = cashAmt;
     this->initialBalance = cashAmt;
+    this->highestPortfolioValue = cashAmt;
 }
 
 void Backtest::run()
@@ -27,8 +28,11 @@ void Backtest::run()
             sell(candles[i]);
         }
 
-        MaximumDrawdown(balance,quantity,candles,i);
+        currentPortfolioValue = balance + quantity * candles[i].close;
         
+        portfolioValue.push_back(currentPortfolioValue);
+
+        MaximumDrawdown(currentPortfolioValue);
     }
 
     //final run check if you still got btc
@@ -105,9 +109,8 @@ double Backtest::executeCommision(double tradeValue)
     return fee;
 }
 
-void Backtest::MaximumDrawdown(double balance, double quantity, std::vector<Candle> candle, size_t index)
+void Backtest::MaximumDrawdown(double currentPortfolioValue)
 {
-    currentPortfolioValue = balance + quantity * candles[index].close;
 
     if(currentPortfolioValue > highestPortfolioValue){
         highestPortfolioValue = currentPortfolioValue;
@@ -119,5 +122,41 @@ void Backtest::MaximumDrawdown(double balance, double quantity, std::vector<Cand
         maximumDrawdown = drawdown;
     }
 }
+
+double Backtest::calcAvgReturns()
+{   
+
+    for(size_t i = 1; i < portfolioValue.size(); i++){
+
+        double r = (portfolioValue[i] - portfolioValue[i-1])/portfolioValue[i-1];
+
+        returns.push_back(r);
+    }
+    
+    double sums = 0.0;
+
+    for(size_t i = 0; i < returns.size(); i++){
+        sums += returns[i];
+    }
+
+    return sums/returns.size();
+}
+
+double Backtest::calcVolatility()
+{   
+    double mean = calcAvgReturns();
+    double variance = 0.0;
+    int n = returns.size();
+
+    for(size_t i = 0; i < n; i++){
+        variance += ((returns[i] - mean) * (returns[i] - mean)); //(returns[i] - mean)^2
+    }
+
+    variance = variance/(n-1);
+
+    return std::sqrt(variance);
+}
+
+
 
 
