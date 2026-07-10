@@ -1,5 +1,12 @@
 // Stochastic Oscillator
 
+/*
+    The stochastic oscillator is a technical momentum indicator 
+    that compares an asset's closing price to its price range 
+    over a specific timeframe
+
+*/
+
 #pragma once
 
 #include "Strategy.h"

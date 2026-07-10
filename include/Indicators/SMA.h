@@ -1,5 +1,12 @@
 // Simple Moving Average
 
+/*
+
+    SMA calculates the average price of an Asset ( closing price for example) over a
+    selected number of time periods, smoothing out price volatility and revealing trends
+
+*/
+
 #pragma once
 
 #include "Strategy.h"

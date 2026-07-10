@@ -1,5 +1,11 @@
 // Exponential Moving Avearage 
 
+/*
+    Unlike SMA and MA, this indicator gives more weight to recent data points. 
+    This is to capatlize on the most current market trends and movement.
+*/
+
+
 #pragma once
 
 #include "Strategy.h"

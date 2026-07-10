@@ -1,5 +1,10 @@
 // Relative strenght index
 
+/*
+    RSI is a momemtum indicator to measure speed and magnitude of a securit's recent price 
+    changes to deect overbough or oversold conditions in the price of that security
+*/
+
 #pragma once
 #include "Strategy.h"
 
