@@ -4,12 +4,15 @@
 #include "Data.h"
 #include "Backtest.h"
 
+//Indicators
 #include "Indicators/SMA.h"
 #include "Indicators/EMA.h"
 #include "Indicators/RSI.h"
 #include "Indicators/MACD.h"
 #include "Indicators/Stoch.h"
 
+//Strategies
+#include "Strategies/EMA_RSI.h"
 
 void runTest(Strategy &strat, const std::vector<Candle>& candles, const double balance, const double commision)
 {
@@ -46,8 +49,9 @@ int main()
 
     // -------------------------------------------------
 
-    MACD macd;
-    runTest(macd,candles,balance,commision);
+    EMA_RSI ema_rsi;
+
+    runTest(ema_rsi,candles,balance,commision);
 
     return 0;
 }
