@@ -46,7 +46,8 @@ int main()
 
     // -------------------------------------------------
 
-    
+    MACD macd;
+    runTest(macd,candles,balance,commision);
 
     return 0;
 }

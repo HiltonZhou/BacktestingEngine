@@ -18,16 +18,49 @@ double EMA::calculateSMA(const std::vector<Candle>& candles,int currentIndex) co
     return sum/period;
 }
 
+double EMA::calculateSMA(const std::vector<double>& values,int currentIndex) const
+{
+    double sum = 0.0;
+
+    for(int i = currentIndex - period + 1; i <= currentIndex; i++)
+    {
+        sum += values[i];
+    }
+
+    return sum / period;
+}
+
 double EMA::calculateEMA(const std::vector<Candle>& candles, int currentIndex) const
 {   
     //base case
-    if(currentIndex == period)
+    if(currentIndex < period - 1){
+        return 0.0;
+    }
+
+    if(currentIndex == period - 1)
     {
-        return calculateSMA(candles, period);
+        return calculateSMA(candles, currentIndex);
     }
 
     //recursive
     return alpha * candles[currentIndex].close + (1 - alpha) * calculateEMA(candles, currentIndex - 1);
+}
+
+//overloaded calcEMA
+double EMA::calculateEMA(const std::vector<double>& values, int currentIndex) const
+{   
+    //base case
+    if(currentIndex < period - 1){
+        return 0.0;
+    }
+
+    if(currentIndex == period - 1)
+    {
+        return calculateSMA(values, currentIndex);
+    }
+
+    //recursive
+    return alpha * values[currentIndex] + (1 - alpha) * calculateEMA(values, currentIndex - 1);
 }
 
 Signal EMA::generateSignal(const std::vector<Candle>& candles,int currentIndex) const

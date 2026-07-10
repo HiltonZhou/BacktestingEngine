@@ -19,15 +19,21 @@ double MACD::calcMACD(const std::vector<Candle>& candles,int currentIndex) const
 
 Signal MACD::generateSignal(const std::vector<Candle>& candles,int currentIndex) const
 {   
-    if(currentIndex < 26){
+    if(currentIndex < 33){      //from the 26 period + 9 period 
         return Signal::HOLD;
     }
 
-    double macd_line = calcMACD(candles,currentIndex);
+    std::vector<double> macd_val;
+
+    for(size_t i = 25 ; i <= currentIndex; i++){
+        macd_val.push_back(calcMACD(candles,i));
+    }
+
+    double macd_line = macd_val.back();
 
     EMA SL(9); // usually a 9 period as signal line
 
-    double signal_line = SL.calculateEMA(candles,currentIndex); // does not calculate as intended???
+    double signal_line = SL.calculateEMA(macd_val,macd_val.size() - 1);
 
     if(macd_line > signal_line){
         return Signal::BUY;
