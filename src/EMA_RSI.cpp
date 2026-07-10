@@ -1,8 +1,6 @@
 #include "Strategies/EMA_RSI.h"
 
-EMA_RSI::EMA_RSI(){
-
-}
+EMA_RSI::EMA_RSI(){}
 
 Signal EMA_RSI::generateSignal(const std::vector<Candle>& candles,int currentIndex) const
 {
