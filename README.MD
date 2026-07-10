@@ -101,10 +101,7 @@ Every trading strategy inherits from the abstract `Strategy` interface.
 class MyStrategy : public Strategy
 {
 public:
-    Signal generateSignal(
-        const std::vector<Candle>& candles,
-        int currentIndex
-    ) const override;
+    Signal generateSignal(const std::vector<Candle>& candles, int currentIndex) const override;
 };
 ```
 
