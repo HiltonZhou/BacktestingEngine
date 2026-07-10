@@ -17,7 +17,7 @@ double MACD::calcMACD(const std::vector<Candle>& candles,int currentIndex) const
     return ema_12 - ema_26;
 }
 
-Signal MACD::generateSignal(const std::vector<Candle>& candles,int currentIndex)const
+Signal MACD::generateSignal(const std::vector<Candle>& candles,int currentIndex) const
 {   
     if(currentIndex < 26){
         return Signal::HOLD;

@@ -16,4 +16,5 @@ add_executable(
     src/EMA.cpp
     src/RSI.cpp
     src/MACD.cpp
+    src/Stoch.cpp
 )

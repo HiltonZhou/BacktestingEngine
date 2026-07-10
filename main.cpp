@@ -8,6 +8,7 @@
 #include "Indicators/EMA.h"
 #include "Indicators/RSI.h"
 #include "Indicators/MACD.h"
+#include "Indicators/Stoch.h"
 
 
 void runTest(Strategy &strat, const std::vector<Candle>& candles, const double balance, const double commision)
@@ -44,17 +45,8 @@ int main()
     const double commision = 0.001;
 
     // -------------------------------------------------
-    SMA SMA_strategy(period);
 
-    runTest(SMA_strategy,candles,balance,commision);
-
-    EMA EMA_strategy(period);
-
-    runTest(EMA_strategy,candles,balance,commision);
-
-    RSI RSI_strategy;
-
-    runTest(RSI_strategy, candles, balance, commision);
+    
 
     return 0;
 }

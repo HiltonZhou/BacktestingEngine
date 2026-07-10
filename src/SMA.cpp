@@ -11,7 +11,7 @@ Signal SMA::generateSignal(const std::vector<Candle>& candles,int currentIndex) 
         return Signal::HOLD;
     }
     
-    double MA = calculateMovingAverage(candles, currentIndex);
+    double MA = calculateSMA(candles, currentIndex);
 
     double currentClosePrice = candles[currentIndex].close;
 
@@ -22,12 +22,24 @@ Signal SMA::generateSignal(const std::vector<Candle>& candles,int currentIndex) 
     return Signal::HOLD;
 }
 
-double SMA::calculateMovingAverage(const std::vector<Candle>& candles,int currentIndex) const
+double SMA::calculateSMA(const std::vector<Candle>& candles,int currentIndex) const
 {
-    double sum = 0;
-    for(int i = currentIndex - period; i < currentIndex; i++){
+    double sum = 0.0;
+    for(int i = currentIndex - period + 1; i <= currentIndex; i++){
         sum += candles[i].close;
     }
 
     return sum/period;
+}
+
+double SMA::calculateSMA(const std::vector<double>& values,int currentIndex) const
+{
+    double sum = 0.0;
+
+    for(int i = currentIndex - period + 1; i <= currentIndex; i++)
+    {
+        sum += values[i];
+    }
+
+    return sum / period;
 }
