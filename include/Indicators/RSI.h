@@ -1,7 +1,6 @@
 // Relative strenght index
 
 #pragma once
-
 #include "Strategy.h"
 
 class RSI : public Strategy

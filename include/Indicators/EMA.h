@@ -1,4 +1,5 @@
 // Exponential Moving Avearage 
+
 #pragma once
 
 #include "Strategy.h"
