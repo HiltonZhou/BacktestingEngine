@@ -95,7 +95,7 @@ cmake --build .
 
 # Creating Your Own Strategy
 
-Every trading strategy inherits from the abstract `Strategy` interface.
+Every trading strategy inherits from the abstract `Strategy` class.
 
 ```cpp
 class MyStrategy : public Strategy
