@@ -11,6 +11,8 @@ struct Candle{
 	double low;
 	double close;
 	double volume;
+
+	bool test
 };
 
 
